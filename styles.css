@@ -1,0 +1,131 @@
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Kumbh Sans';
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+/* container */
+.faq {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 63rem;
+  position: relative;
+  border-radius: 1.3rem;
+  margin: 5rem;
+}
+/* hidden proprety */
+.hidden {
+  display: none;
+}
+/* left side */
+.img-container {
+  overflow: hidden;
+  padding: 3rem 0px 3rem 2rem;
+}
+.box-desktop {
+  position: absolute;
+  right: 93.5%;
+  top: 41%;
+}
+.woman-online {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -23%;
+}
+
+/* right side */
+.qna {
+  padding: 2rem;
+}
+.btn {
+  border: none;
+  background-color: white;
+  margin: 1rem 0;
+  font-size: 15px;
+}
+.btn:hover {
+  color: hsl(14, 88%, 65%);
+}
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+hr {
+  max-width: 19rem;
+  border: 1px solid hsl(240, 5%, 91%);
+}
+.answer {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: hsl(240, 6%, 50%);
+  max-width: 45ch;
+}
+.bold {
+  font-family: 'Kumbh Sans';
+  font-weight: 700;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+.test {
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+  align-items: center;
+}
+.woman-mobile {
+  display: none;
+  max-width: 18rem;
+}
+
+@media (max-width: 1065px) {
+  .faq {
+    grid-template-columns: 1fr;
+    max-width: 25rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    position: static;
+    padding: 0.5rem;
+  }
+  .btn {
+    padding: 0.3rem 0;
+  }
+  .box-desktop,
+  .woman-online {
+    all: unset;
+    display: none;
+  }
+  .img-container {
+    all: unset;
+  }
+  .woman-mobile {
+    display: block;
+    margin: 0 auto;
+    padding-top: 1rem;
+    margin-bottom: -7rem;
+    z-index: 23;
+  }
+  .title {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .test {
+    grid-template-columns: 1fr 1.2rem;
+  }
+  .arrow {
+    float: right;
+  }
+}
